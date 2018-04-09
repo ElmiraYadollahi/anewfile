@@ -6,7 +6,7 @@
 % copyright statement.
 
 % Copyright
-%\CopyrightYear{2016}
+%\CopyrightYear{2018} 
 %\setcopyright{acmcopyright}
 %\setcopyright{acmlicensed}
 %\setcopyright{rightsretained}
@@ -19,9 +19,15 @@
 % ISBN
 %\isbn{123-4567-24-567/08/06}
 %Conference
-%\conferenceinfo{CHI'16,}{May 07--12, 2016, San Jose, CA, USA}
+%\conferenceinfo{IDC '18,}{June 19-23, 2018, Trondheim, Norway}
 %Price
 %\acmPrice{\$15.00}
+
+\CopyrightYear{2018}
+\setcopyright{acmlicensed}
+\conferenceinfo{IDC '18,}{June 19--22, 2018, Trondheim, Norway}
+\isbn{978-1-4503-5152-2/18/06}\acmPrice{\$15.00}
+\doi{https://doi.org/10.1145/3202185.3202743}
 
 % Use this command to override the default ACM copyright statement
 % (e.g. for preprints).  Consult the conference website for the
@@ -30,20 +36,20 @@
 %% HOW TO OVERRIDE THE DEFAULT COPYRIGHT STRIP --
 %% Please note you need to make sure the copy for your specific
 %% license is used here!
- \toappear{
- Permission to make digital or hard copies of all or part of this work
- for personal or classroom use is granted without fee provided that
- copies are not made or distributed for profit or commercial advantage
- and that copies bear this notice and the full citation on the first
- page. Copyrights for components of this work owned by others than ACM
- must be honored. Abstracting with credit is permitted. To copy
- otherwise, or republish, to post on servers or to redistribute to
- lists, requires prior specific permission and/or a fee. Request
- permissions from \href{mailto:Permissions@acm.org}{Permissions@acm.org}. \\
- IDC '18,  June 2018, Trondheim, Norway\\
- ACM xxx-x-xxxx-xxxx-x/xx/xx\ldots \$15.00 \\
- DOI: \url{http://dx.doi.org/xx.xxxx/xxxxxxx.xxxxxxx}
- }
+ %\toappear{
+ %Permission to make digital or hard copies of all or part of this work
+ %for personal or classroom use is granted without fee provided that
+ %copies are not made or distributed for profit or commercial advantage
+ %and that copies bear this notice and the full citation on the first
+ %page. Copyrights for components of this work owned by others than ACM
+ %must be honored. Abstracting with credit is permitted. To copy
+ %otherwise, or republish, to post on servers or to redistribute to
+ %lists, requires prior specific permission and/or a fee. Request
+ %permissions from \href{mailto:Permissions@acm.org}{Permissions@acm.org}. \\
+ %IDC '18,  June 2018, Trondheim, Norway\\
+ %ACM xxx-x-xxxx-xxxx-x/xx/xx\ldots \$15.00 \\
+ %DOI: \url{http://dx.doi.org/xx.xxxx/xxxxxxx.xxxxxxx}
+ %}
 
 % Arabic page numbers for submission.  Remove this line to eliminate
 % page numbers for the camera ready copy
@@ -85,17 +91,17 @@
 % "\documentclass[chi_draft]{sigchi}". You can then place todo notes
 % by using the "\todo{...}"  command. Make sure to disable the draft
 % option again before submitting your final document.
-\usepackage{todonotes}
+%\usepackage{todonotes}
 
 % Paper metadata (use plain text, for PDF inclusion and later
 % re-using, if desired).  Use \emtpyauthor when submitting for review
 % so you remain anonymous.
 \def\plaintitle{When Deictic Gestures in a Robot Can Harm \\Child-Robot Collaboration}
-% * <wafa.johal@gmail.com> 2018-01-10T11:46:59.418Z:
-%
-% ^.
+
+
+
 \def\plainauthor{First Author, Second Author, Third Author,
-  Fourth Author, Fifth Author, Sixth Author}
+  Fourth Author}
 \def\emptyauthor{}
 \def\plainkeywords{Child robot interaction; education; reading; learning by teaching; protégé effect; deictic gestures; pointing.}
 \def\plaingeneralterms{Documentation, Standardization}
@@ -141,7 +147,11 @@
   breaklinks=true,
   hypertexnames=false
 }
-
+%
+\def\sharedaffiliation{%
+\end{tabular}
+\begin{tabular}{c}}
+%
 % create a shortcut to typeset table headings
 % \newcommand\tabhead[1]{\small\textbf{#1}}
 
@@ -150,38 +160,25 @@
 
 \title{\plaintitle}
 
-\numberofauthors{3}
-\author{%
-  \alignauthor{Leave Authors Anonymous\\
-    \affaddr{for Submission}\\
-    \affaddr{City, Country}\\
-    \email{e-mail address}}\\
-  \alignauthor{Leave Authors Anonymous\\
-    \affaddr{for Submission}\\
-    \affaddr{City, Country}\\
-    \email{e-mail address}}\\
-  \alignauthor{Leave Authors Anonymous\\
-    \affaddr{for Submission}\\
-    \affaddr{City, Country}\\
-    \email{e-mail address}}\\
-  \alignauthor{Leave Authors Anonymous\\
-    \affaddr{for Submission}\\
-    \affaddr{City, Country}\\
-    \email{e-mail address}}\\
-}
-
+\numberofauthors{4}
+    \author{ Elmira Yadollahi $^{\star\dagger}$, Wafa Johal$^{\star}$, Ana Paiva$^{\dagger}$, Pierre Dillenbourg$^{\star}$\\      
+%      
+      \sharedaffiliation
+      \affaddr{$^{\star}$École Polytechnique Fédérale de Lausanne, Switzerland}  \\
+      \affaddr{$^{\dagger}$Instituto Superior Técnico, University of Lisbon, Portugal}   \\
+      \email{elmira.yadollahi@epfl.ch,}     
+      \email{wafa.johal@epfl.ch,}  
+      \email{ana.paiva@inesc-id.pt,} 
+      \email{pierre.dillenbourg@epfl.ch}
+          }
+%
 \maketitle
 
-% * <wafa.johal@gmail.com> 2018-01-10T11:47:12.629Z:
-% 
-% I suggest to change the title to CoReader: Effect of pointing gestures in co-reading activity with a humanoid robot
-% 
-% ^.
 
 \begin{abstract}
 %Reading is considered a fundamental and crucial aspect of learning, leading to the acquisition of language, social, and critical thinking skills.
 %While the school systems are designed to provide the fundamentals of reading and related training, repeated practices in school and at home are essential to master this skill, especially for children with reading difficulties. 
-This paper describes  research aimed at supporting children's reading practices using a robot designed to interact with children as their reading companion.
+This paper describes research aimed at supporting children's reading practices using a robot designed to interact with children as their reading companion.
 We use a learning by teaching scenario in which the robot has a similar or lower reading level compared to children, and needs help and extra practice to develop its reading skills. 
 The interaction is structured with robot reading to the child and sometimes making mistakes as the robot is considered to be in the learning phase. 
 Child corrects the robot by giving it instant feedbacks. 
@@ -197,23 +194,47 @@ However, surprisingly, for this same group of children, the deictic gestures wer
 
 \end{abstract}
 
-\category{H.5.m.}{Information Interfaces and Presentation
-  (e.g. HCI)}{Miscellaneous}{}{}
+
+\begin{CCSXML}
+<ccs2012>
+<concept>
+<concept_id>10010405.10010489.10010492</concept_id>
+<concept_desc>Applied computing~Collaborative learning</concept_desc>
+<concept_significance>500</concept_significance>
+</concept>
+<concept>
+<concept_id>10003120.10003121.10011748</concept_id>
+<concept_desc>Human-centered computing~Empirical studies in HCI</concept_desc>
+<concept_significance>300</concept_significance>
+</concept>
+<concept>
+<concept_id>10003120.10003123.10011759</concept_id>
+<concept_desc>Human-centered computing~Empirical studies in interaction design</concept_desc>
+<concept_significance>300</concept_significance>
+</concept>
+</ccs2012>
+\end{CCSXML}
+
+\ccsdesc[500]{Applied computing~Collaborative learning}
+\ccsdesc[300]{Human-centered computing~Empirical studies in HCI}
+\ccsdesc[300]{Human-centered computing~Empirical studies in interaction design}
+
+\printccsdesc
+
+%\category{H.5.m.}{Information Interfaces and Presentation
+%  (e.g. HCI)}{Miscellaneous} \category{See
+%  \url{http://acm.org/about/class/1998/} for the full list of ACM
+%  classifiers. This section is required.}{}{}
 
 \keywords{\plainkeywords}
 
 
 \begin{figure}[t]
   \centering
-  \includegraphics[width=1\linewidth]{figures/Expsetup2.jpeg}
+  \includegraphics[width=1\linewidth]{figures/Expsetup2.png}
   \caption{CoReader Activity Platform}
   \label{fig:readingExp}
 \end{figure}
-% * <wafa.johal@gmail.com> 2018-01-10T12:10:08.539Z:
-% 
-% We should not use the eye tracking image since we are not using the eye tracking data
-% 
-% ^.
 
 \section{Introduction}
 Reading is considered a fundamental and crucial aspect of learning, leading to the acquisition of language, social, and critical thinking skills.
@@ -234,9 +255,9 @@ Concurrently, there are some emerging new studies providing individual and adapt
 In this context, robots have been used as a teacher/tutor, learning companion, and learner in different educational scenarios and with varying learning goals.
 Presently, there are numerous works dedicated to studying the effects of robot tutors in social robotics \cite{kanda2004interactive, castellano2009detecting,ribeiro2014m,kennedy2015robot}.
 On the other hand, little work has been done to study the effect of learning by teaching paradigm in development of reading proficiency. 
-Although, the use of learning by teaching paradigm has been explored and studied in different fields such as writing and biology \cite{hood2015children,chase2009teachable}.
+However, the use of learning by teaching paradigm has been explored and studied in different fields such as writing and biology \cite{hood2015children,chase2009teachable}.
 
-It is known that designing learning activities with robots require a precise understanding of the robot's role and its implications for learning, in our case reading.
+It is known that designing learning activities with robots requires a precise understanding of the robot's role and its implications for learning, in our case reading.
 Nevertheless, it is important to precisely define the role of the robot and its effect on reading, which requires a proper discernment of the reading skill. 
 Reading is a composition of a variety of complex cognitive performances with discrete yet interdependent mental processes \cite{kirby1988style}.  
 According to Kirby \cite{kirby1988style} reading in any instance is a function of task difficulty, reader's skills, and reader's purpose. 
@@ -246,7 +267,7 @@ Hence,  our interaction design should take into account all of these factors.
 % CONTRIBUTION SECTION
 This paper presents the design of a platform to engage children in a reading while listening (RWL) activity, with the robot reading the text and the child helping the robot in case of making mistakes.
 The idea is to use learning by teaching paradigm to keep the child motivated and interested in the interaction.
-However, in our proposed user study, we intent to explore the effect of robot's deictic gestures during reading on the child. 
+However, in our proposed user study, we intend to explore the effect of robot's deictic gestures during reading on the child. 
 The interaction is designed in a way that the robot makes mistakes and the child corrects them.
 We want to see how much a deictic gesture such a pointing to text can help the child's reading while listening (RWL) proficiency. 
 The effect of pointing on the child's reading, especially on children with reading difficulties and poor readers can provide valuable information in designing reading companions for children. 
@@ -257,13 +278,13 @@ In the following sections, first, we present the previous works in human-robot i
 Then, we describe the design of our reading platform explaining how the robot and interaction are implemented. 
 After that, we demonstrate the design of our experiment with details about participants, selection of reading materials, design of mistakes, robot's behaviors and our research hypotheses. 
 Then we present the evaluation of our results for each hypothesis. 
-In the final sections, we discuss the results, reflects on the teacher's and children's input, explain the limitations of our work, provide the future developments of our platform, and describe our contributions.
+In the final sections, we discuss the results, reflect on the teacher's and children's input, explain the limitations of our work, provide the future developments of our platform, and describe our contributions.
 
 
 
 
 \section{Related Works}
-% TOO BIG!
+
 
 Our study describes the development of a reading activity within a child-robot interaction scenario while it incorporates learning by teaching paradigm.
 Aligned with developing the robots cognitive abilities, we designed a user study to evaluate the effect of robot's deictic gestures such as pointing to text on the child's reading. 
@@ -277,21 +298,21 @@ In the conjunction of human-robot interaction and education, the role of the rob
 Looking closely, it is evident that robot can take on different roles to teach, assist, inspire and motivate the learner. 
 Therefore, a robot can take on the role of a teacher or tutor, a learning companion, or a learner \cite{mubin2013review,leite2013social,hood2015children}. 
 A study by Kanda et al. \cite{kanda2004interactive} using robots as peer English tutors shows different ways children interact with robots and can benefit from them. 
-Long-term interaction studies by Tanaka et al. using QRIO \cite{tanaka2007socialization} and Hyun et al. using iRobiQ \cite{hyun2010relationships}, studies the level of social interactions between the robot and children. 
+Long-term interaction studies by Tanaka et al. using QRIO \cite{tanaka2007socialization} and Hyun et al. using iRobiQ \cite{hyun2010relationships}, show the level of social interactions between the robot and children. 
 Through these experiments, they provide guidelines for using robots as tutors in the classrooms.
-In another study by Leyzberg et al. \cite{leyzberg2014personalizing} the effect of personalization of a tutor robot on the students' performance was evaluated. 
+On another study by Leyzberg et al. \cite{leyzberg2014personalizing} the effect of personalization of a tutor robot on the students' performance was evaluated. 
 L2TOR by Belpaeme et al. \cite{belpaeme2015l2tor} is a recent project focusing on evaluating social robots for tutoring second language to children in early childhood .
 L2TOR project tries to address current demands and define the pedagogy of a robot-assisted tutoring. 
 Learning a certain subject during the interaction with robots has also been studied \cite{brown2013engaging,hood2015children}. 
 In Brown's study \cite{brown2013engaging} they used a robot; Darwin, to assist children in solving math questions.
-In the other hand, hood's study \cite{hood2015children, lemaignan2016learning} introduced the CoWriter project focusing on writing activities using the robot; Nao.
+In the other hand, hood's study \cite{hood2015children, lemaignan2016learning} introduced the CoWriter project focusing on writing activities using the robot Nao.
 CoWriter is a project that motivates children to help a robot with bad handwriting, and in the process, it engages children into practicing their own handwriting in a more subtle yet productive way as they feel responsible to help the robot. 
 This phenomenon is called protégé effect which emerges through learning by teaching paradigm.  
 
 \subsection{Learning by Teaching}
 
 Previous research in education and cognitive sciences suggests that one of the powerful methods of learning is teaching others \cite{bargh1980cognitive}.
-The potential of learning by teaching can also be deduced from methods such as peer-assisted tutoring, reciprocal teaching, small group interaction, and self-explanation which each possesses a certain degree of teaching to others in the medium of learning. 
+The potential of learning by teaching can also be deduced from methods such as peer-assisted tutoring, reciprocal teaching, small group interaction, and self-explanation each of which possesses a certain degree of teaching to others. 
 There is also research demonstrating the positive effect of learning by teaching in computer-assisted learning environments \cite{biswas2005learning,chase2009teachable}. 
 The effect of using teachable agents during learning activities, on motivation and learning gain of the students have been studied by Chase et al. \cite{chase2009teachable}. 
 They observed students who taught to the teachable agents spent more time on learning behaviors and learned more than students who learned by themselves.
@@ -307,7 +328,7 @@ One method suggested to help children with reading difficulties is \textit{Readi
 The effect of RWL is shown to be promising for poor readers in improving comprehension, word recognition, reading fluency, acquisition of word meaning, and learning to read \cite{carbo1978teaching,chomsky1976after}. 
 One of the latest studies devising synchronized RWL is by Gerbier et al. \cite{gerbier2018audio}. 
 They evaluate the effect of visually highlighting the text as it is being read compared to simple text condition.
-Their study shows that poor readers tend to benefits more from these visual cues.
+Their study shows that poor readers tend to benefit more from these visual cues.
 Another recent example of technology used to assist readers is PhonoBlocks, a Tangible User Interface (TUI) for children with dyslexia \cite{fan2016design}.
 In studies using robots, the work by Michaelis and Mutlu \cite{michaelis2017someone} proposes an in-home learning companion, in which the child is reading to a robot. 
 They focus on how such companion can help children to expand their reading interests and abilities. 
@@ -317,9 +338,19 @@ Storytelling delves into another aspect of interaction with a robot.
 For a robot to be a good storyteller being aware of its audience is critical.
 The study by Mutlu et al. \cite{mutlu2006storytelling} shows how the robot's gaze behavior during storytelling affects the audience's perception of the robot.
 Another system providing interactive storytelling is \textit{AIBOStory} which aims to enrich remote communication experiences on the Internet using AIBO robots \cite{papadopoulos2013aibostory}.
-In the study by Kory and Breazeal \cite{kory2014storytelling}, a social robot interact with children as a peer and play a storytelling game with them.
+In the study by Kory and Breazeal \cite{kory2014storytelling}, a social robot interacts with children as a peer and plays a storytelling game with them.
 The interaction is designed to introduce children to new vocabularies in the context of storytelling games. 
 It evaluates the effect of adapting robot's language level to the child's learning, complexities of the stories, and similarities to the robot's stories.
+
+%new part
+Studies by Pellegrini and Brody \cite{pellegrini1985parents} and Bus et al. \cite{bus1995joint} show that parent-child shared book reading can be beneficial for the children's emergent literacy.
+However, there are various factors that affect the interaction and its quality, such as the child's level of competence or parent's level of adjustment to the child's needs and problems.
+These factors makes it hard to distinguish between the effect of parent's behavior on the child or child's behavior on the parent \cite{pellegrini1985parents}.  
+MacNeil \cite{mcneill1992hand} and de Ruiter \cite{de200014} have a typology distinguishing different types of gestures used during speech or interaction. 
+Among the different gestures that accompanies human speech, we are interested in deictic gestures that translates to pointing gestures during book reading.
+Looking at the study by Justice et al. \cite{justice2008influence}, they examine the effect of verbal and nonverbal references by adult during storybook reading on children's visual attention to the print. 
+The nonverbal references in their case translate to pointing to the print by tracking the text while reading.
+Their study was conducted with preschool children, concluding that explicit referencing such as pointing increases the children's visual attention to the print. 
 
 \setlength{\parskip}{2em}
 
@@ -352,7 +383,7 @@ The use of \textit{Augmented Reality Tags} ARTags package \footnote{\href{http:/
 It also implies low costs as neither complicated programming nor costly modification of the books is required.
 \begin{figure}[t]
   \centering
-  \includegraphics[width=1\linewidth]{figures/booknrobot2.jpg}
+  \includegraphics[width=1\linewidth]{figures/booknrobot2.png}
   \caption{CoReader platform; Left image shows the robot with the book and buttons; Right image shows the view from the robot's bottom camera looking at the book accompanied with ARTags}
   \label{fig:readingPlatform}
 \end{figure}
@@ -375,19 +406,29 @@ For this purpose, we apply the LED patterns created and evaluated by Johnson et 
 The interaction as a whole was designed to be simple and understandable for children. 
 In the beginning of each session, the robot introduces itself, expresses its desire to read the book, but it also explains that sometimes it needs help when it makes mistakes. 
 Before the start of the interaction, each child is informed of how the interaction flows, how to use the buttons, and his/her role in helping and correcting the robot in case of making mistakes.
-If the robot makes a mistake and the child doesn't recognize it, the robot keeps that state in memory and make that mistake again if it asked to repeat the page afterwards.
+If the robot makes a mistake and the child doesn't recognize it, the robot keeps that state in memory and makes that mistake again if it is asked to repeat the page afterwards.
 For assessment purposes, the child is not informed about the mistakes that he/she didn't recognize, and the interaction will be carried out regardless of recognition of mistakes.
 
 
 \section{Experiment Design}
 \subsection{Participants}
-The study involved 22 typically developing children between the age of 6 and 7 (11F, 11M) selected from second grade in an international school, participated in a within-subject experiment. Each child interacted with the robot during two sessions of around 30 minutes in two different days. 
+The study involved 22 typically developing children between the age of 6 and 7 (11F, 11M) selected from second grade in an international school in Switzerland, participated in a within-subject experiment. Each child interacted with the robot during two sessions of around 30 minutes in two different days. 
 The children were divided into two groups according to their reading level by their teacher. We refer to these two groups as \textit{Low} and \textit{High} level. 
 We used the Oxford Reading Tree series to assign an appropriate book to each group based on their reading level (\textit{Low}: stage 4 of Oxford Reading Tree and \textit{High}: stage 7 of Oxford reading tree). 
 According to the teacher, as soon as children in the Low level are proficient in their level they are promoted to the higher levels.
-% TODO this sentence shouldn't be here but in the discussion
-% However, in the high level the children are more diverse, some of them are more proficient and even read books above their level in the class, while some are just promoted and still adjusting to the new books.
 The \textit{Low} group consists of 9 children (5F, 4M) and \textit{High} level of 13 children (5F, 8M).
+
+%new section
+Regarding the children's profile participating in this experiment, all of them were selected from the same class, working with the same teacher. 
+This is important in a sense that they were exposed to the same learning methods.
+The separation of the children into two groups were based on the teachers assessment of their reading skills. 
+However, such separation only exists in the class during reading sessions to adjust the level of the book to the child.
+According to the teacher, ``pointing gestures were instinctively used to direct the children’s attention as they decode words and then sentences''.
+``At the beginning it is very important to guide the children through the reading process.''
+Most children drop the pointing technique as they become more confident readers. 
+Although, children with attention problem would still benefit from this technique. 
+And while all children are used to the pointing technique, some need the teacher to use pointing, some use their own fingers to point as they decode, and some don't seem to need it at all.
+
 
 \subsection{Reading Material}
 The books were selected after discussion with the primary school teacher and based on the children's reading levels and potentials.
@@ -415,18 +456,15 @@ We considered that the robot should exhibit  similar mistakes as a child with re
 %While RMI provides a diagnostic tool for reading clinicians or special reading teachers, it also has several disadvantages regarding the time needed for administration, scoring and interpreting the result. 
 
 According to the \textit{Simplified Miscue Analysis} (SMA) by Cunningham \cite{cunningham1984simplified} %consists of steps to collect and code the 
-miscues made by a reader can be analysed through 4 questions. We used the first 3 questions from SMA to design our robot's mistakes. 
-%The last question on SMA is concerned about readers correction of the miscue which is not in the interest of our development.
+miscues made by a reader can be analyzed through 4 questions. We used the first 3 questions from SMA to design our robot's mistakes. 
 
 The questions from SMA examine the miscues based on similarity to the original wording, change in syntax, and change in meaning. 
 These questions led us to define a property called the level of mismatch in designing the robot's mistake.
 Furthermore, since we are working on books with images, we are also interested in adding a type of mistakes defined as a mismatch with illustrations. 
 This type of mistake was added to check the children's attention to the illustrations and the reading, and they are easier to recognize. 
-%Inspired by SMA questions and our interest in the effect of images, 
 As a result we designed 3 types of mistakes based on the different types of mismatch.
 
 \textbf{Type-1} mistakes are defined as any mismatch between the wording and the book's illustrations.
-%This type overwrites all the next two types of mistakes. 
 An example of this type is when the robot reads \textit{elephant} instead of \textit{penguin} while there is an image of a penguin in the book. 
 
 \textbf{Type-2} mistakes (question 3 from SMA) are contextual mistakes and correspond to a change in the meaning of the sentence after being replaced with another word.
@@ -463,7 +501,6 @@ We also include mistakes that slightly modifies the original wording with changi
 One example is modifying the end of the verb from \textit{-ed} to \textit{-ing}, or similar modifications, or changing the original wording from singular to plural or vice-versa.
 We design these types of mistakes, due to the fact that they can be recognized through pronunciation or understanding the syntactical changes.
 Table \ref{tab:MistakeTab} shows each type of mistake with a sample that was used in the user study. 
-% this table is useless if you already give these examples in the text
 
 
 
@@ -472,7 +509,6 @@ Table \ref{tab:MistakeTab} shows each type of mistake with a sample that was use
 
 
 \subsection{Experimental Design}
-%In CoReader, the robot acts like a social reading companion, while the child helps it to correct its reading mistakes.
 We design different criteria to define and develop different behaviors of the robot that can help the interaction and learning.
 One of the important aspects of reading together is establishing joint attention. 
 Tomasello \cite{tomasello1995joint} believes joint attention should be perceived beyond simultaneously looking and orienting to an object or location.  
@@ -560,8 +596,7 @@ Mistakes are not just recognized by reading the text. Other aspects such as imag
 While a combination of good reading proficiency, careful reading, and simultaneously listening to the robot should guarantee the detection of any mistakes, it is reasonable to consider additional means that can help the child to recognize the mistakes as an influential factor.  
 And these additional methods became our basis to design and categorize the mistakes.
 
-In Figure \ref{fig:MistakeCor}, we display the children's success in correcting each type of mistake regardless of their book level and robot hand condition. 
-%This validation should show that we have designed the mistakes in accordance with our theoretical descriptions.  
+In Figure \ref{fig:MistakeCor}, we display the children's success in correcting each type of mistake regardless of their book level and robot hand condition.   
 The figure shows that Type-1 mistakes have the highest correction percentage and Type-3 have the lowest.  
 The correction analysis reveals that our mistakes design has been in accordance with our design implications.
 Pearson's Chi-squared test shows no significant difference between correction of Type-1 and Type-2 mistakes $(\chi^2 = 2.2037, df = 1, p-value = 0.1377)$, as well as Type-2 and Type-3 $(\chi^2 = 3.273, df = 1, p-value = 0.07043)$.
@@ -604,7 +639,12 @@ Pearson's Chi-squared test with Yates' continuity correction is used to evaluate
 This test shows no significant difference between pointing and not pointing conditions $(\chi^2 = 0.68952, df = 1, p-value = 0.4063)$.
 Considering that our main hypothesis is to show that pointing improves children's performance in reading and recognizing the mistakes, no significant difference is observed, hence our first hypothesis is rejected. 
 
-
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=1\linewidth]{figures/cVp.pdf}
+  \caption{Performance according to correction percentage measure divided based on pointing conditions.}
+  \label{fig:Pointing}
+\end{figure}
 
 \subsection{H2: Interaction Between Pointing and Mistake Type}
 Figure \ref{fig:PointingVsType} demonstrates the correction percentage for each type of mistake for both pointing conditions. 
@@ -614,18 +654,21 @@ This difference in performances for Type-1 mistakes is significant based on Pear
 This result proves our second hypothesis that pointing gesture is most effective on the mistakes recognizable through illustrations.
 The differences for Type-2 and Type-3 mistakes between two pointing conditions are not significant with following test results $(\chi^2 = 0.19996, df = 1, p-value = 0.6548)$ and $(\chi^2 = 0.53361, df = 1, p-value = 0.4651)$ respectively.
 Nevertheless, we will still explore the interaction between pointing conditions and mistakes types in more detail in the next section when we also group the result based on the children's reading level.
+
+
+
 \begin{figure}[t]
   \centering
-  \includegraphics[width=1\linewidth]{figures/cVp.pdf}
-  \caption{Performance according to correction percentage measure divided based on pointing conditions.}
-  \label{fig:Pointing}
-\end{figure}
+  \includegraphics[width=1\linewidth]{figures/cVmVp2.pdf}
+  \caption{Interaction Between pointing conditions and mistake types. $***p<0.001$.}
+  \label{fig:PointingVsType}
+\end{figure}   
 
 \subsection{H3: Interaction Between Pointing and Reading Level}
 In this section, we divide the results based on the children's reading level.
-%Then we demonstrate the correction percentage of each mistake type based on the pointing condition for each level. 
 We have already discussed the interaction between pointing conditions and mistake types for all of the children in Figure \ref{fig:PointingVsType}.
 In Figure \ref{fig:PointingVsTypeVsLevel}, we present the interaction between the pointing conditions and mistake types separated according to High and Low-levels. 
+
 
 Figure \ref{fig:HighPointingVsTypeVsLevel}, for High-level group, shows that children in the pointing condition are more successful in correcting the robot when it makes Type-1 and Type-2 mistakes.
 Pearson's Chi-squared test shows a significance of $*p<0.05$ for both Type-1 and Type-2 mistakes with $(\chi^2 = 4.2741, df = 1, p-value = 0.0387)$ and $(\chi^2 = 6.1791, df = 1, p-value = 0.01293)$ respectively.
@@ -634,26 +677,7 @@ And for Type-2 mistakes, we can say that pointing could have helped the High-lev
 There is no significant difference in correcting Type-3 mistakes between the two pointing conditions $(\chi^2 = 0, df = 1, p-value = 1)$.
 We can deduce that children who are proficient in reading benefit more from the pointing condition in correcting Type-1 and Type-2 mistakes. 
 
-Figure \ref{fig:LowPointingVsTypeVsLevel} shows the performance of the Low level group.
-We observe that this group was differently affected by the pointing conditions. 
-They showed a better performance for the Type-1 mistakes and lower performance for the Type-2 and Type-3 mistakes, in the pointing condition. 
-In the pointing condition, children were significantly better in recognizing the Type-1 mistakes $(\chi-squared = 31.845, df = 1, p-value = 1.67e-08)$. 
-This is aligned with the result of our second hypothesis.
-However, surprisingly, pointing gestures had a negative effect on the recognition of Type-2 mistakes. 
-The difference between the two conditions for Type-2 mistakes is significant with $*p<0.05$ using Chi-squared test $(\chi^2 = 6.2267, df = 1, p-value = 0.01258)$. As it will be discussed later, the justification can be that children in the Low-level group may have been distracted by the pointing gestures.
-Moreover, similar to the previous results, pointing doesn't have a significant effect on children finding Type-3 mistakes $(\chi^2 = 2.6466, df = 1, p-value = 0.1038)$.
 
-We can conclude that children at both levels can benefit from pointing gestures when having to recognize mistakes that are a mismatch with the image.
-However, pointing seems to distract children in the Low-level group from comprehending the text.
-%and can be distracting for them.
-And as a result, in the pointing condition, they achieved a lower performance in recognizing mistakes when there was a mismatch with the meaning of the text.
-
-\begin{figure}[t]
-  \centering
-  \includegraphics[width=1\linewidth]{figures/cVmVp2.pdf}
-  \caption{Interaction Between pointing conditions and mistake types. $***p<0.001$.}
-  \label{fig:PointingVsType}
-\end{figure}  
 
 \begin{figure*}[t]
 \centering
@@ -673,12 +697,30 @@ And as a result, in the pointing condition, they achieved a lower performance in
 \label{fig:PointingVsTypeVsLevel}
 \end{figure*}
 
+Figure \ref{fig:LowPointingVsTypeVsLevel} shows the performance of the Low level group.
+We observe that this group was differently affected by the pointing conditions. 
+They showed a better performance for the Type-1 mistakes and lower performance for the Type-2 and Type-3 mistakes, in the pointing condition. 
+In the pointing condition, children were significantly better in recognizing the Type-1 mistakes $(\chi-squared = 31.845, df = 1, p-value = 1.67e-08)$. 
+This is aligned with the result of our second hypothesis.
+However, surprisingly, pointing gestures had a negative effect on the recognition of Type-2 mistakes. 
+The difference between the two conditions for Type-2 mistakes is significant with $*p<0.05$ using Chi-squared test $(\chi^2 = 6.2267, df = 1, p-value = 0.01258)$. As it will be discussed later, the justification can be that children in the Low-level group may have been distracted by the pointing gestures.
+Moreover, similar to the previous results, pointing doesn't have a significant effect on children finding Type-3 mistakes $(\chi^2 = 2.6466, df = 1, p-value = 0.1038)$.
+
+We can conclude that children at both levels can benefit from pointing gestures when having to recognize mistakes that are a mismatch with the image.
+However, pointing seems to distract children in the Low-level group from comprehending the text.
+And as a result, in the pointing condition, they achieved a lower performance in recognizing mistakes when there was a mismatch with the meaning of the text.
+
+
+
+
+
 \section{Discussions}
 
 \subsection{Pointing Gestures}
 The main goal of this study is to evaluate the effect of pointing gesture by a robot in a reading activity with a child peer. 
 The result from our user study shows that overall the pointing has some significant, yet diverse, effects on the children's reading, and particularly on their capability to detect and correct the robot's mistakes. 
-The pointing affects mistake recognition differently based on the type of mistake and based on the children's proficiency in reading.
+Our findings are aligned with the results from Justice et al. \cite{justice2008influence}, that explicit referencing to the print such as pointing increases the children visual attention to the print.
+However, we notice that the pointing affects mistake recognition differently based on the type of mistake and based on the children's proficiency in reading.
 We observed that pointing has a significant effect in recognizing the mistakes that are a mismatch between text and images, for both reading levels. 
 The effect on this type of mistakes is more significant for early readers compared to children who are more proficient in reading. 
 On the other hand, for the mistakes that are a mismatch between text and meaning, pointing has a different effect on children in Low-level compared to High-level.
@@ -690,18 +732,15 @@ Subsequently, pointing does not have a significant overall positive effect on re
 \subsection{Teachers' Input}
 One important aspect of this type of studies is the teachers' feedback. 
 In general, the teachers were really cooperative and interested in the project. 
-%We were open to know their opinion and suggestions, and they were willing to give their inputs. 
 They were willing to let the experimenter attend the class to become more familiarized with the classroom and the methods they used.
 When we explained about the general idea and the concept of the robot reading to the child, they were very positive and considered that challenging children with one level higher book was indeed a good idea.
 Regarding the development and design of the mistakes, they provided us with relevant input about the common mistakes that children usually make during reading.
 Their suggestions were incorporated into the design of the experiment.
 There was also a suggestion about adding more modes of interaction between the child and the robot, and thus enrich the whole experience. 
-%We will try to implement in our future development.
 The idea comes from the fact that when children have a problem reading a word, especially in the Low-level group, they start deciphering the word letter by letter and by sounding each letter.
 Usually, when a child starts deciphering, they either recognize the word and read it successfully or they get help from the teacher to complete the word. 
 Some new types of interaction that could help this process would be very useful. 
 In fact, the proposed idea was to incorporate the deciphering mode into the robot and let the child be the one who would help the robot to read the word. 
-%This will be explained in more detail in the Further development section.
 
 \subsection{Children's Input}
 Basing our study on the learning by teaching paradigm, we figured informing children of their role during the experiment is a fundamental component of this experiment. 
@@ -757,7 +796,7 @@ We will make the design of the mistakes more automated in the future, and try to
 \textbf{\textit{Scripted interaction:}}
 The current interaction was autonomous and scripted, which can work for a limited number of sessions.
 But, by increasing the number of sessions, we need to make the robot's behavior more diverse and flexible.
-The idea is to expand the range of the robot's behavior in conjugation with the new modes of interaction.
+The idea is to expand the range of the robot's behaviors in conjugation with the new modes of interaction.
 
 
 
@@ -809,7 +848,6 @@ Our work builds upon a growing body of literature on robotics in education, in m
 We tried to understand the building blocks of reading as a fundamental skill and suggest an interaction model inspired by miscue analyses in reading. 
 Furthermore, we tried to channel the learning by teaching paradigm as a way to keep children motivated to engage in the reading activity and to become more responsible for the robot. 
 The main contribution of our study is to provide an understanding of the effect of pointing on reading in similar scenarios.
-%While it is suggested that pointing has a positive effect in providing extra information, it can also have a negative effect on certain aspects of the child's attentional state of the task in hand.
 In order to help children in early stages of reading or with difficulties, it is essential to provide certain type of assistance only after careful examination regarding its effects.
 We have observed, deictic gestures such as pointing affect children differently based on their reading proficiency. 
 Pointing gestures can be beneficial for children in directing their attention to illustrations and helping them correcting mistakes associated with that.
@@ -821,9 +859,11 @@ were  recruited  from teachers who showed interest in project.
 All  students  provided  verbal  assent  to  participate when  the  Co-Reader  activities  were  initially  described  by their teachers,  and  parents  signed  consent  forms  prior  to video  and  audio  data  collection. 
 Institutional recommendations were followed to insure data anonymization of all logged data.
 
+
 \section{Acknowledgments}
-Anonymized.
-%We would like to thank Patrick Jefford, Justine Fisher, Nathan John Hobson and the staff of primary section of International School of Geneva for their participation, support, and understanding through this experiment. With special thanks to children who participated in our experiment being so enthusiastic and caring to help our robot.   
+This work was supported by national funds through Fundação para a Ciência e a Tecnologia (FCT) with reference UID/CEC/50021/2013. 
+We would like to thank the Swiss National Science Foundation for supporting this project through the National Center of Competence in Research Robotics. 
+Most importantly, We would like to show our gratitude toward Patrick Jefford, Justine Fisher, Nathan John Hobson and staff of primary section of International School of Geneva for their participation, support, and understanding through these experiments. With special thanks to all the children who participated in our experiment being so enthusiastic and caring to help our robot.   
 
 % Balancing columns in a ref list is a bit of a pain because you
 % either use a hack like flushend or balance, or manually insert
